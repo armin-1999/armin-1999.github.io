@@ -1,0 +1,173 @@
+:root {
+    --primary-color: #B5B9FF;    /* بنفش پاستلی */
+    --secondary-color: #B5D8FF;  /* آبی پاستلی روشن */
+    --accent-color: #9FB4FF;     /* آبی پاستلی */
+    --light-color: #F0F3FF;      /* آبی بسیار روشن */
+    --dark-color: #4A4A6A;       /* بنفش تیره */
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 8px solid white;
+    box-shadow: 0 0 20px rgba(181, 185, 255, 0.3);
+}
+
+/* Section Styles */
+.section-title {
+    color: var(--dark-color);
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* Skill Cards */
+.skill-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(159, 180, 255, 0.1);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(159, 180, 255, 0.2);
+}
+
+.skill-card i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+/* Project Cards */
+.project-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(159, 180, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(159, 180, 255, 0.2);
+}
+
+.project-info {
+    padding: 1.5rem;
+    background: linear-gradient(to bottom, white, var(--light-color));
+}
+
+/* Social Links */
+.social-links a {
+    color: var(--dark-color);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Contact Section */
+.contact-info i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.contact-info p {
+    transition: transform 0.3s ease;
+}
+
+.contact-info p:hover {
+    transform: translateX(5px);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: var(--dark-color);
+}
+
+footer .fa-heart {
+    color: #FF9EC4;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.skill-card, .project-card {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* Additional Styles */
+section {
+    position: relative;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, var(--light-color) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+
+/* Education Section Styles */
+.education-card .card {
+    border: none;
+    border-right: 4px solid var(--primary-color);
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(159, 180, 255, 0.1);
+}
+
+.education-card .card:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 8px 25px rgba(159, 180, 255, 0.2);
+}
+
+.education-card .card-title {
+    color: var(--dark-color);
+    font-weight: bold;
+}
+
+.education-card .card-subtitle {
+    color: var(--accent-color);
+}
